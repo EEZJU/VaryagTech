@@ -6,6 +6,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   integrations: [react(), sitemap()],
   site: 'https://varyagtech.com',
+  base: '/',
   vite: {
     plugins: [tailwindcss()],
   },
