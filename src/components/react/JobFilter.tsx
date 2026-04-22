@@ -85,7 +85,7 @@ export default function JobFilter({ jobs, departments, locations }: JobFilterPro
           filteredJobs.map((job) => (
             <div
               key={job.id}
-              className="bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition-shadow"
+              className="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition-shadow"
             >
               <button
                 onClick={() => toggleJob(job.id)}
