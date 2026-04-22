@@ -1,0 +1,49 @@
+---
+import { Icon } from "../ui/ProductIcon";
+
+const features = [
+  {
+    title: '智能传感器研发',
+    description: '专注于高精度工业传感器的研发与制造，为工业自动化提供核心感知能力',
+    icon: 'activity',
+  },
+  {
+    title: '工业控制器',
+    description: '研发先进的DCS控制系统和智能控制器，满足复杂工业环境需求',
+    icon: 'cpu',
+  },
+  {
+    title: '通信设备',
+    description: '提供可靠的工业通信解决方案，支持多种工业协议',
+    icon: 'network',
+  },
+  {
+    title: '工业互联网平台',
+    description: '构建基于大数据、云计算和AI技术的专业化工业互联网服务平台',
+    icon: 'cloud',
+  },
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">核心业务领域</h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        专注于工业互联网全产业链的研发与服务，为客户提供智能化整体解决方案
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {features.map((feature) => (
+        <div class="group p-6 bg-slate-50 rounded-2xl hover:bg-blue-50 transition-all duration-300 border border-slate-100 hover:border-blue-200">
+          <div class="w-14 h-14 bg-blue-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <Icon name={feature.icon as any} className="w-7 h-7 text-white" />
+          </div>
+          <h3 class="text-xl font-semibold text-slate-800 mb-2">{feature.title}</h3>
+          <p class="text-slate-600">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

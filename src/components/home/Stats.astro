@@ -1,0 +1,25 @@
+---
+const stats = [
+  { value: "10+", label: "年行业经验" },
+  { value: "30+", label: "发明专利" },
+  { value: "20+", label: "高新技术产品" },
+  { value: "100%", label: "浙大技术团队" },
+];
+---
+
+<section class="py-20 bg-slate-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {
+        stats.map((stat) => (
+          <div class="text-center">
+            <div class="text-4xl md:text-5xl font-bold text-blue-400 mb-2">
+              {stat.value}
+            </div>
+            <div class="text-slate-400">{stat.label}</div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,61 @@
+---
+import { SITE, COMPANY_INFO } from "../../config/site";
+---
+
+<footer class="bg-slate-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div
+      class="flex flex-col md:flex-row md:justify-between md:items-start gap-8"
+    >
+<div class="max-w-md">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="logo_min.png" alt="VaryagTech" class="w-14 h-14" />
+            <span class="font-bold text-xl text-white">{COMPANY_INFO.nameEn}</span>
+          </div>
+          <p class="text-slate-400 mb-4">{SITE.description}</p>
+        <div class="text-slate-400 text-sm">
+          <p>成立时间：{COMPANY_INFO.founded}</p>
+          <p>认证：{COMPANY_INFO.certification}</p>
+        </div>
+      </div>
+
+      <div class="flex gap-16">
+        <div>
+          <h4 class="font-semibold mb-4">快速链接</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li>
+              <a href="/" class="hover:text-blue-400 transition-colors">首页</a>
+            </li>
+            <li>
+              <a href="/products" class="hover:text-blue-400 transition-colors"
+                >产品中心</a>
+            </li>
+            <li>
+              <a
+                href="/capabilities"
+                class="hover:text-blue-400 transition-colors">能力展示</a>
+            </li>
+            <li>
+              <a href="/careers" class="hover:text-blue-400 transition-colors"
+                >加入我们</a>
+            </li>
+            <li>
+              <a href="/about" class="hover:text-blue-400 transition-colors"
+                >关于我们</a>
+            </li>
+            <li>
+              <a href="/contact" class="hover:text-blue-400 transition-colors"
+                >联系我们</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="border-t border-slate-800 mt-12 pt-8 text-center text-slate-400 text-sm"
+    >
+      <p>&copy; {new Date().getFullYear()} {COMPANY_INFO.name} 版权所有</p>
+    </div>
+  </div>
+</footer>

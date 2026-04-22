@@ -1,0 +1,111 @@
+---
+import { COMPANY_INFO, PARTNERS, ADVANTAGES } from "../../config/site";
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
+          技术依托浙江大学
+        </h2>
+        <p class="text-lg text-slate-600 mb-6">
+          {COMPANY_INFO.name}成立于{
+            COMPANY_INFO.founded
+          }，技术依托于浙江大学电气学院、浙江大学华南工业技术研究院、浙江大学华硕实验室科研团队。
+        </p>
+        <p class="text-slate-600 mb-8">
+          长年来致力于智能传感器、控制器、通信网络设备的研发，开创具有特色的兼容确定性通信可定义以太网DDCE，是我国工控和物联网领域数智系统解决方案提供商。
+        </p>
+        <a
+          href="/about"
+          class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700"
+        >
+          了解更多
+          <svg
+            class="w-5 h-5 ml-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+      <div
+        class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 text-white"
+      >
+        <h3 class="text-2xl font-bold mb-6">核心技术优势</h3>
+        <ul class="space-y-4">
+          {
+            ADVANTAGES.map((advantage) => (
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-blue-300 mr-3 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>{advantage.title}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partners Section -->
+<section class="py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+        合作伙伴
+      </h2>
+      <p class="text-lg text-slate-600">领先行业的综合服务商</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      {
+        PARTNERS.map((partner) => (
+          <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H3v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">
+              {partner.name}
+            </h3>
+            <p class="text-slate-600 text-sm">{partner.type}</p>
+            {partner.code && (
+              <p class="text-blue-600 text-sm mt-1">{partner.code}</p>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
