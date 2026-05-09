@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { COMPANY_INFO } from '../config/site';
-import RFQForm from '../components/react/RFQForm';
 ---
 
 <Layout title="联系我们">
@@ -77,8 +76,135 @@ import RFQForm from '../components/react/RFQForm';
         <!-- RFQ Form -->
         <div class="bg-slate-50 rounded-2xl p-8">
           <h2 class="text-3xl font-bold text-slate-800 mb-6">在线询价</h2>
-          <RFQForm client:load />
+          <form id="rfq-form" class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block text-sm font-medium text-slate-700 mb-1">
+                  姓名 *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="请输入您的姓名"
+                />
+              </div>
+              <div>
+                <label for="company" class="block text-sm font-medium text-slate-700 mb-1">
+                  公司名称
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="请输入公司名称"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="email" class="block text-sm font-medium text-slate-700 mb-1">
+                  邮箱 *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-slate-700 mb-1">
+                  电话
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="请输入您的电话"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="service" class="block text-sm font-medium text-slate-700 mb-1">
+                感兴趣的产品
+              </label>
+              <select
+                id="service"
+                name="service"
+                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                <option value="">请选择产品类型</option>
+                <optgroup label="软件产品">
+                  <option value="wlg-ide">WLG-IDE 组态软件</option>
+                  <option value="agent-switch">智能体交换机控制器</option>
+                  <option value="smartenergy">瓦良格能源管控平台</option>
+                  <option value="security-gateway">工业安全网关软件</option>
+                </optgroup>
+                <optgroup label="E3系列PLC">
+                  <option value="var-p-500">VAR-P-500 高端系列</option>
+                  <option value="var-p-500d">VAR-P-500D 基础系列</option>
+                  <option value="var-p-500u">VAR-P-500U 拓展系列</option>
+                </optgroup>
+                <optgroup label="X2系列PLC">
+                  <option value="var-x-100">VAR-X-100 基础款</option>
+                  <option value="var-x-200">VAR-X-200 运动控制版</option>
+                </optgroup>
+                <optgroup label="网络设备">
+                  <option value="was-8-1000">WAS-8-1000 工业交换机</option>
+                </optgroup>
+                <option value="other">其他</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-slate-700 mb-1">
+                留言 *
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="4"
+                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="请描述您的需求..."
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            >
+              提交询价
+            </button>
+          </form>
+
+          <div id="form-success" class="hidden bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded-lg">
+            <p class="font-semibold">感谢您的询价！</p>
+            <p>请拨打我们的电话 <span class="font-semibold">{COMPANY_INFO.phone}</span> 进行详细咨询。</p>
+          </div>
         </div>
+
+        <script>
+          const form = document.getElementById('rfq-form') as HTMLFormElement;
+          const successMsg = document.getElementById('form-success');
+
+          form?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            console.log('Form submitted:', Object.fromEntries(formData));
+            form.classList.add('hidden');
+            successMsg?.classList.remove('hidden');
+          });
+        </script>
       </div>
     </div>
   </section>

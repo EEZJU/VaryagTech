@@ -1,7 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { COMPANY_INFO } from "../config/site";
 import { Icon } from "../components/ui/ProductIcon";
+import integrateEnergyImg from "../images/capabilities/integrate_energy.png";
+import smartGridImg from "../images/capabilities/smart_grid.png";
+import smartManufacturingImg from "../images/capabilities/smart_manufacturing.png";
+import railTransitImg from "../images/capabilities/rail_transit.png";
+import energyMiningImg from "../images/capabilities/energy_mining.png";
+import chemicalPharmaImg from "../images/capabilities/chemical_pharma.png";
 
 const capabilities = [
   {
@@ -30,7 +35,7 @@ const capabilities = [
   },
   {
     title: "WLG-IDE组态软件",
-    description: "基于WEB的低代码组态软件平台",
+    description: "基于WEB的低代码编程工具，提供控制系统全生命周期管理",
     features: ["系统架构设计", "仿真调试", "系统部署", "运维监控", "AI助手集成"],
     icon: "code",
   },
@@ -46,16 +51,16 @@ const coreTechnologies = [
   { title: "DDCE确定性通信", description: "开创具有特色的兼容确定性通信可定义以太网", details: ["0.000003ms时间精度", "软件定义冗余", "多冗余链路", "支持AES/SM4加密"], icon: "shield" },
   { title: "工业交换机技术", description: "新一代工业级网络核心设备", details: ["千兆互联", "环网冗余", "透明时钟", "TT确定性通信", "<1ms自愈时间"], icon: "network" },
   { title: "PLC控制器技术", description: "高性能可编程控制器", details: ["双核240MHz/1.2GHz处理器", "16KB非易失性存储器", "WiFi4/蓝牙4.3", "IEEE-1588时间同步"], icon: "cpu" },
-  { title: "WLG-IDE组态软件", description: "基于WEB的低代码编程平台", details: ["功能块FB设计", "即拖即用", "1000观测点", "GPT技术集成", "AI助手"], icon: "code" },
+  { title: "WLG-IDE组态软件", description: "基于WEB的低代码编程工具，提供控制系统全生命周期管理", details: ["功能块FB设计，系统架构灵活", "集成度高，封装丰富复合功能块", "1000个观测点实时监控修改", "GPT技术集成，AI助手快捷编程"], icon: "code" },
 ];
 
 const industries = [
-  { name: "综合能源", description: "光伏储能接入、保护控制设备、能量管理系统EMS", icon: "sun" },
-  { name: "智能电网", description: "变电站自动化(IEC61850)、配电网络通信与控制", icon: "zapIcon" },
-  { name: "智能制造", description: "工业机器人控制、生产线设备互联与控制", icon: "cog" },
-  { name: "轨道交通", description: "地铁调度控制、车载PIS网络冗余控制", icon: "train" },
-  { name: "能源矿山", description: "油气管道监控、井下设备组网、风电光伏场站通信", icon: "factory" },
-  { name: "化工制药", description: "化工过程控制、制药自动化设备", icon: "flask" },
+  { name: "综合能源", description: "光伏储能接入、保护控制设备、能量管理系统EMS", icon: "sun", image: integrateEnergyImg },
+  { name: "智能电网", description: "变电站自动化(IEC61850)、配电网络通信与控制", icon: "zapIcon", image: smartGridImg },
+  { name: "智能制造", description: "工业机器人控制、生产线设备互联与控制", icon: "cog", image: smartManufacturingImg },
+  { name: "轨道交通", description: "地铁调度控制、车载PIS网络冗余控制", icon: "train", image: railTransitImg },
+  { name: "能源矿山", description: "油气管道监控、井下设备组网、风电光伏场站通信", icon: "factory", image: energyMiningImg },
+  { name: "化工制药", description: "化工过程控制、制药自动化设备", icon: "flask", image: chemicalPharmaImg },
 ];
 
 const processSteps = [
@@ -137,13 +142,27 @@ const processSteps = [
         <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">应用行业</h2>
         <p class="text-lg text-slate-600">广泛服务于多个工业领域</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-2 gap-6">
         {industries.map((industry) => (
-          <div class="bg-slate-50 rounded-xl p-6 hover:shadow-md transition-shadow">
-            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
-              <Icon name={industry.icon as any} className="w-5 h-5 text-blue-600" />
+          <div class="flex flex-col bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-shadow h-full">
+            <div class="mb-4 flex-shrink-0">
+              {industry.image ? (
+                <img src={industry.image.src} alt={industry.name} class="w-full aspect-[3/2] object-cover rounded-lg" />
+              ) : (
+                <div class="h-40 rounded-lg flex items-center justify-center bg-gradient-to-br from-emerald-600 to-green-400">
+                  <div class="text-center">
+                    <svg class="w-8 h-8 text-white/70 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span class="text-white/70 text-xs font-medium">{industry.name} 行业图片</span>
+                  </div>
+                </div>
+              )}
             </div>
-            <h3 class="text-lg font-semibold text-slate-800 mb-1">{industry.name}</h3>
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Icon name={industry.icon as any} className="w-5 h-5 text-blue-600" />
+              </div>
+              <h3 class="text-lg font-semibold text-slate-800">{industry.name}</h3>
+            </div>
             <p class="text-slate-500 text-sm">{industry.description}</p>
           </div>
         ))}
@@ -177,7 +196,7 @@ const processSteps = [
       <p class="text-xl text-slate-600 mb-8">联系我们的专业团队，获取定制化服务</p>
       <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200">
         咨询报价
-        <Icon name="arrowRight" className="w-5 h-5 ml-2 text-blue-200" />
+        <Icon name="arrowRight" className="w-5 h-5 ml-2 text-white" />
       </a>
     </div>
   </section>

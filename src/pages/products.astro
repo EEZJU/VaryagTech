@@ -1,6 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "../components/ui/ProductIcon";
+import VAR_P_500 from "../images/products/VAR-P-500_render.png";
+import VAR_P_500D from "../images/products/VAR-P-500D_render.png";
+import VAR_P_500U from "../images/products/VAR-P-500U_render.png";
+import VAR_X_100 from "../images/products/VAR-X-100_render.png";
+import VAR_X_200 from "../images/products/VAR-X-200_render.png";
+import WAS_8_1000_1 from "../images/products/WAS-8-1000_render.png";
+import IDE from "../images/products/IDE_render.png";
+import SDN from "../images/products/SDN_render.png";
+import VSE from "../images/products/VSE_render.png";
+import EMS from "../images/products/EMS_render.png";
 ---
 
 <Layout title="产品中心">
@@ -13,186 +23,91 @@ import { Icon } from "../components/ui/ProductIcon";
     </div>
   </section>
 
+  <!-- 软件产品 -->
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <div class="inline-flex items-center px-4 py-2 bg-pink-100 text-pink-700 rounded-full text-sm mb-4">软件产品</div>
-        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">WLG-IDE 组态软件</h2>
-        <p class="text-lg text-slate-600 max-w-2xl mx-auto">基于WEB的低代码甚至无代码交互方式编程的工具软件</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">软件产品</h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">组态开发、能源管理、储能监控、网络控制等软件产品</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div class="bg-slate-50 rounded-2xl p-8">
-          <div class="w-14 h-14 bg-blue-700 rounded-xl flex items-center justify-center mb-4">
-            <Icon name="box" className="w-7 h-7 text-white" />
-          </div>
-          <h3 class="text-xl font-bold text-slate-800 mb-4">WLG-IDE 特色功能</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start">
-              <Icon name="check" className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-              <span class="text-slate-600">基于功能块FB设计，系统架构灵活</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="check" className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-              <span class="text-slate-600">涵盖所有适用场景PLC处理功能</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="check" className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-              <span class="text-slate-600">即拖即用，支持自定义功能块拓展</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="check" className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-              <span class="text-slate-600">1000个观测点实时监控修改</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="check" className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-              <span class="text-slate-600">集成GPT技术，内置AI助手</span>
-            </li>
-          </ul>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <img src={IDE.src} alt="WLG-IDE 组态软件" class="w-full aspect-video object-contain" />
         </div>
 
-        <div class="bg-slate-50 rounded-2xl p-8">
-          <div class="w-14 h-14 bg-blue-700 rounded-xl flex items-center justify-center mb-4">
-            <Icon name="workflow" className="w-7 h-7 text-white" />
-          </div>
-          <h3 class="text-xl font-bold text-slate-800 mb-4">功能覆盖</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start">
-              <Icon name="check" className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-              <span class="text-slate-600">控制系统架构设计</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="check" className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-              <span class="text-slate-600">系统仿真调试</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="check" className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-              <span class="text-slate-600">系统部署</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="check" className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-              <span class="text-slate-600">系统运维和监控</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="check" className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-              <span class="text-slate-600">在线式功能块智能查找</span>
-            </li>
-          </ul>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <img src={SDN.src} alt="智能体交换机控制器" class="w-full aspect-video object-contain" />
+        </div>
+
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <img src={VSE.src} alt="瓦良格能源管控平台" class="w-full aspect-video object-contain" />
+        </div>
+
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <img src={EMS.src} alt="储能电站物联网平台" class="w-full aspect-video object-contain" />
         </div>
       </div>
     </div>
   </section>
 
+  <!-- E3系列PLC -->
   <section class="py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <div class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm mb-4">E3系列 PLC</div>
+        <div class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm mb-4">E3系列</div>
         <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">VAR-P-500系列可编程控制器</h2>
         <p class="text-lg text-slate-600">双核240MHz处理器，强大的控制能力</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 bg-blue-700 rounded-xl flex items-center justify-center mb-4">
-            <Icon name="cpu" className="w-7 h-7 text-white" />
-          </div>
-          <h3 class="text-xl font-bold text-slate-800 mb-2">高端系列 VAR-P-500</h3>
-          <p class="text-slate-600 mb-4">高性能工业控制器</p>
-          <ul class="text-sm text-slate-500 space-y-2">
-            <li>• 双核240MHz处理器</li>
-            <li>• 8.5MB工作存储器</li>
-            <li>• 16MB负载存储器</li>
-            <li>• 16Kb非易失性存储器</li>
-            <li>• WiFi4/蓝牙4.3</li>
-            <li>• IEEE-1588时间同步</li>
-          </ul>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <img src={VAR_P_500.src} alt="VAR-P-500 高端系列可编程控制器" class="w-full aspect-video object-contain" />
         </div>
 
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 bg-blue-700 rounded-xl flex items-center justify-center mb-4">
-            <Icon name="zap" className="w-7 h-7 text-white" />
-          </div>
-          <h3 class="text-xl font-bold text-slate-800 mb-2">基础系列 VAR-P-500D</h3>
-          <p class="text-slate-600 mb-4">经济型工业控制器</p>
-          <ul class="text-sm text-slate-500 space-y-2">
-            <li>• 双核240MHz处理器</li>
-            <li>• 8.5MB工作存储器</li>
-            <li>• 16MB负载存储器</li>
-            <li>• 64Kb非易失性存储器</li>
-            <li>• 单网口10/100Mbps</li>
-            <li>• 2路RS485</li>
-          </ul>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <img src={VAR_P_500D.src} alt="VAR-P-500D 基础系列可编程控制器" class="w-full aspect-video object-contain" />
         </div>
 
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 bg-blue-700 rounded-xl flex items-center justify-center mb-4">
-            <Icon name="layers" className="w-7 h-7 text-white" />
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <img src={VAR_P_500U.src} alt="VAR-P-500U 拓展系列可编程控制器" class="w-full aspect-video object-contain" />
+        </div>
+
+        <div class="bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-video bg-gradient-to-br from-slate-300 to-slate-200 flex items-center justify-center">
+            <div class="text-center">
+              <svg class="w-10 h-10 text-slate-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+              <span class="text-slate-500 text-xs font-medium">更多PLC（待扩展）</span>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-slate-800 mb-2">拓展系列 VAR-P-500U</h3>
-          <p class="text-slate-600 mb-4">高扩展工业控制器</p>
-          <ul class="text-sm text-slate-500 space-y-2">
-            <li>• 双核240MHz处理器</li>
-            <li>• 8.5MB工作存储器</li>
-            <li>• 16MB负载存储器</li>
-            <li>• 16Kb非易失性存储器</li>
-            <li>• 16路输入/16路输出</li>
-            <li>• 250V耐压</li>
-          </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- X2系列PLC -->
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <div class="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm mb-4">X2系列 PLC</div>
+        <div class="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm mb-4">X2系列</div>
         <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">VAR-X系列智能控制器</h2>
         <p class="text-lg text-slate-600">1.2GHz双核处理器，支持完整Linux系统</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 bg-purple-600 rounded-xl flex items-center justify-center mb-4">
-            <Icon name="terminal" className="w-7 h-7 text-white" />
-          </div>
-          <h3 class="text-xl font-bold text-slate-800 mb-2">VAR-X-100 基础款</h3>
-          <p class="text-slate-600 mb-4">通用智能控制器</p>
-          <ul class="text-sm text-slate-500 space-y-2 mb-4">
-            <li>• 1.2GHz双核处理器</li>
-            <li>• 512MB内存</li>
-            <li>• 支持完整Linux系统</li>
-            <li>• 双千兆网口</li>
-            <li>• 2路RS485隔离通信</li>
-            <li>• 4路继电器输出</li>
-            <li>• 8路数字输入</li>
-            <li>• 3路ADC输入</li>
-          </ul>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <img src={VAR_X_100.src} alt="VAR-X-100 基础款智能控制器" class="w-full aspect-video object-contain" />
         </div>
 
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 bg-purple-600 rounded-xl flex items-center justify-center mb-4">
-            <Icon name="workflow" className="w-7 h-7 text-white" />
-          </div>
-          <h3 class="text-xl font-bold text-slate-800 mb-2">VAR-X-200 运动控制版</h3>
-          <p class="text-slate-600 mb-4">高性能运动控制器</p>
-          <ul class="text-sm text-slate-500 space-y-2 mb-4">
-            <li>• 1.2GHz双核处理器</li>
-            <li>• 512MB内存</li>
-            <li>• 支持完整Linux系统</li>
-            <li>• 单千兆网口</li>
-            <li>• 4路RS485隔离通信</li>
-            <li>• 8路数字输入</li>
-            <li>• 4路隔离开漏输出</li>
-            <li>• 4路继电器输出</li>
-            <li>• 6路ADC</li>
-            <li>• 16路PWM输出</li>
-          </ul>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <img src={VAR_X_200.src} alt="VAR-X-200 运动控制版智能控制器" class="w-full aspect-video object-contain" />
         </div>
       </div>
     </div>
   </section>
 
+  <!-- 网络设备 -->
   <section class="py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -201,50 +116,31 @@ import { Icon } from "../components/ui/ProductIcon";
         <p class="text-lg text-slate-600">工业级网络核心设备，千兆互联、环网冗余</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 bg-green-600 rounded-xl flex items-center justify-center mb-4">
-            <Icon name="network" className="w-7 h-7 text-white" />
-          </div>
-          <h3 class="text-xl font-bold text-slate-800 mb-2">WAS-8-1000 工业交换机</h3>
-          <p class="text-slate-600 mb-4">新一代工业级网络核心设备</p>
-          <ul class="text-sm text-slate-500 space-y-2">
-            <li>• 千兆互联</li>
-            <li>• 环网冗余，自愈时间&lt;1ms</li>
-            <li>• 透明时钟</li>
-            <li>• TT确定性通信</li>
-            <li>• 宽温设计 -30~+70°C</li>
-            <li>• IP53防护等级</li>
-            <li>• 支持IEEE 1588时间同步</li>
-          </ul>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <img src={WAS_8_1000_1.src} alt="WAS-8-1000 工业交换机" class="w-full aspect-video object-contain" />
         </div>
 
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 bg-green-600 rounded-xl flex items-center justify-center mb-4">
-            <Icon name="server" className="w-7 h-7 text-white" />
+        <div class="bg-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-video bg-gradient-to-br from-slate-300 to-slate-200 flex items-center justify-center">
+            <div class="text-center">
+              <svg class="w-10 h-10 text-slate-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+              <span class="text-slate-500 text-xs font-medium">更多工业交换机（待扩展）</span>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-slate-800 mb-2">智能体交换机控制器</h3>
-          <p class="text-slate-600 mb-4">高性能工业交换系统核心</p>
-          <ul class="text-sm text-slate-500 space-y-2">
-            <li>• 集中控制与信息采集</li>
-            <li>• 最高4096条TT确定性链路</li>
-            <li>• us级延迟PLC互联</li>
-            <li>• 100ns级时间同步</li>
-            <li>• 支持AES/SM4加密</li>
-            <li>• 自定义网络拓扑</li>
-          </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">了解更多产品详情</h2>
       <p class="text-xl text-slate-600 mb-8">联系我们的专业团队获取详细产品资料</p>
       <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200">
         联系我们
-        <svg class="w-5 h-5 ml-2 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-5 h-5 ml-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
         </svg>
       </a>

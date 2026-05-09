@@ -11,7 +11,7 @@ export const COMPANY_INFO = {
   nameEnFull: 'Hangzhou Varyag Intelligent Manufacturing Co., Ltd.',
   founded: '2015年12月',
   原来的: '广州瓦良格机器人有限公司',
-  certification: '国家高新技术企业 (2020年/2024年)',
+  certification: '国家高新技术企业 (2024年)',
   email: 'hr@varyagtech.com',
   phone: '0571-86395882',
   address: '杭州市富阳区银湖街道创意路289-15号8层805室',

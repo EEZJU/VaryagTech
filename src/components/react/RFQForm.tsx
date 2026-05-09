@@ -110,7 +110,7 @@ export default function RFQForm() {
 
       <div>
         <label htmlFor="service" className="block text-sm font-medium text-slate-700 mb-1">
-          感兴趣的服务
+          感兴趣的产品
         </label>
         <select
           id="service"
@@ -119,11 +119,25 @@ export default function RFQForm() {
           onChange={handleChange}
           className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         >
-          <option value="">请选择服务类型</option>
-          <option value="sensor">智能传感器</option>
-          <option value="controller">工业控制器</option>
-          <option value="communication">通信设备</option>
-          <option value="platform">工业互联网平台</option>
+          <option value="">请选择产品类型</option>
+          <optgroup label="软件产品">
+            <option value="wlg-ide">WLG-IDE 组态软件</option>
+            <option value="agent-switch">智能体交换机控制器</option>
+            <option value="edge-compute">边缘计算控制器软件</option>
+            <option value="security-gateway">工业安全网关软件</option>
+          </optgroup>
+          <optgroup label="E3系列PLC">
+            <option value="var-p-500">VAR-P-500 高端系列</option>
+            <option value="var-p-500d">VAR-P-500D 基础系列</option>
+            <option value="var-p-500u">VAR-P-500U 拓展系列</option>
+          </optgroup>
+          <optgroup label="X2系列PLC">
+            <option value="var-x-100">VAR-X-100 基础款</option>
+            <option value="var-x-200">VAR-X-200 运动控制版</option>
+          </optgroup>
+          <optgroup label="网络设备">
+            <option value="was-8-1000">WAS-8-1000 工业交换机</option>
+          </optgroup>
           <option value="other">其他</option>
         </select>
       </div>
