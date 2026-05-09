@@ -31,6 +31,7 @@ npm run preview  # 预览构建产物
 
 - **React 19 兼容性**: 部分组件（JobFilter、RFQForm）已改用 `client:only="react"`。避免混用 `client:load` 和 React 19 hooks
 - **产品图片**: 所有产品图片和行业图片已齐全（见 README 底部清单）
+- **图片转换**: `scripts/convert-to-webp.mjs` — 需先 `npm install sharp`，运行 `node scripts/convert-to-webp.mjs` 将 `src/images/` 下的 PNG 转为 WebP（保持原分辨率，质量 80%）
 - **公司信息**: 修改 `src/config/site.ts` 中的 `SITE`、`COMPANY_INFO`、`NAV_ITEMS`、`PRODUCTS`、`CAREERS` 等 export 即可更新
 
 ## 文件结构
