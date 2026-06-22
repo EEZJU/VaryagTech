@@ -2,7 +2,7 @@
 
 工业互联网解决方案提供商官方网站，基于 Astro + React + Tailwind CSS 构建。
 
-公司成立于 2026 年 05 月，位于浙江省杭州市余杭区，技术依托于浙江大学电气学院、浙江大学华南工业技术研究院、浙江大学华硕实验室科研团队。
+公司成立于 2026 年 05 月，位于浙江省杭州市余杭区，技术依托于浙江大学电气学院、浙江大学华硕实验室科研团队。
 
 ## 技术栈
 
@@ -37,7 +37,7 @@ npm run preview
 | 公司信息 | `COMPANY_INFO` | name、nameEn、nameEnFull、founded、email、phone、address |
 | 网站元信息 | `SITE` | title、description、url、author |
 | 导航菜单 | `NAV_ITEMS` | 首页、产品中心、能力展示、加入我们、关于我们 |
-| 合作伙伴 | `PARTNERS` | 正泰集团、柯尔照明、浙江大学、华南工业技术研究院 |
+| 合作伙伴 | `PARTNERS` | 正泰集团、柯尔照明、菲达环保、浙江大学 |
 | 产品列表 | `PRODUCTS` | software（WLG-IDE）、plc（VAR-P-500/500D/500U/X-100/X-200）、switch（WAS-8-1000、智能体交换机控制器） |
 | 核心优势 | `ADVANTAGES` | 30+ 项发明专利、0.00003ms 时间精度、确定性通信、浙大技术团队 |
 | 招聘信息 | `CAREERS` | 6 个岗位，3 个部门（研发部/产品部/销售部/技术支持），2 个地点（杭州/远程） |

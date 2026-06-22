@@ -33,8 +33,8 @@ export const NAV_ITEMS = [
 export const PARTNERS = [
   { name: '正泰集团', code: '股票代码: 601877', type: '国内能源管控第一梯队' },
   { name: '柯尔照明', type: '全屋智能家居系统供应商' },
+  { name: '菲达环保', code: '股票代码: 600526', type: '国内大气污染治理龙头' },
   { name: '浙江大学', type: '技术依托单位' },
-  { name: '浙江大学华南工业技术研究院', type: '技术依托单位' },
 ] as const;
 
 export const PRODUCTS = {
