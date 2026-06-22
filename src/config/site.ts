@@ -1,21 +1,19 @@
 export const SITE = {
-  title: '杭州瓦良格智造有限公司',
+  title: '瓦良格（杭州）智慧技术有限责任公司',
   description: '工控和物联网领域数智系统解决方案提供商，致力于智能传感器、控制器、通信网络设备的研发，开创具有特色的兼容确定性通信可定义以太网DDCE',
   url: 'https://varyagtech.com',
-  author: '杭州瓦良格智造有限公司',
+  author: '瓦良格（杭州）智慧技术有限责任公司',
 } as const;
 
 export const COMPANY_INFO = {
-  name: '杭州瓦良格智造有限公司',
+  name: '瓦良格（杭州）智慧技术有限责任公司',
   nameEn: 'VaryagTech',
-  nameEnFull: 'Hangzhou Varyag Intelligent Manufacturing Co., Ltd.',
-  founded: '2015年12月',
-  原来的: '广州瓦良格机器人有限公司',
-  certification: '国家高新技术企业 (2024年)',
+  nameEnFull: 'Hangzhou Varyag Intelligent Technology Co., Ltd.',
+  founded: '2026年05月',
   email: 'hr@varyagtech.com',
-  phone: '0571-86395882',
-  address: '杭州市富阳区银湖街道创意路289-15号8层805室',
-  addressEn: 'Room 805, 8th Floor, No.289-15 Chuangyi Road, Yinhu Street, Fuyang District, Hangzhou',
+  phone: '13905810758',
+  address: '浙江省杭州市余杭区五常街道五常大道132号D座801室',
+  addressEn: 'Room 801, Building D, No. 132 Wuchang Avenue, Wuchang Street, Yuhang District, Hangzhou, Zhejiang, China',
 } as const;
 
 export const SOCIAL_LINKS = {
@@ -62,7 +60,7 @@ export const ADVANTAGES = [
     description: '自主研发，拥有三十多项发明专利技术',
   },
   {
-    title: '0.000003ms时间精度',
+    title: '0.00003ms时间精度',
     description: '微秒级时间精度，助力高精度控制',
   },
   {
